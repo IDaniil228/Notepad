@@ -31,8 +31,15 @@ namespace Notepad
             OpenFileDialog dialog = new OpenFileDialog();
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                richTextBox1.LoadFile(dialog.FileName);
-                fileName = dialog.FileName;
+                try 
+                {
+                    richTextBox1.LoadFile(dialog.FileName);
+                    fileName = dialog.FileName;
+                }
+                catch 
+                {
+                    MessageBox.Show("Недопустимый тип файла", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }           
         }
 
