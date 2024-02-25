@@ -23,6 +23,18 @@ namespace Notepad
         /// <param name="e"></param>
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (save == false)
+            {
+                DialogResult res = MessageBox.Show("Хотите сохранить файл?", "Сохранить", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                if (res == DialogResult.Yes)
+                {
+                    сохранитьToolStripMenuItem_Click(sender, e);
+                }
+                else if (res == DialogResult.Cancel)
+                {
+                    return;
+                }
+            }
             OpenFileDialog dialog = new OpenFileDialog();
             if (dialog.ShowDialog() == DialogResult.OK)
             {
@@ -31,6 +43,7 @@ namespace Notepad
                     richTextBox1.LoadFile(dialog.FileName);
                     fileName = dialog.FileName;
                     Text = Path.GetFileNameWithoutExtension(fileName);
+                    save = false;
                 }
                 catch
                 {
@@ -45,6 +58,18 @@ namespace Notepad
         /// <param name="e"></param>
         private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (save == false)
+            {
+                DialogResult res = MessageBox.Show("Хотите сохранить файл?", "Сохранить", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                if (res == DialogResult.Yes)
+                {
+                    сохранитьToolStripMenuItem_Click(sender, e);
+                }
+                else if (res == DialogResult.Cancel)
+                {
+                    return;
+                }
+            }
             Text = "Блокнот";
             save = false;
             richTextBox1.Text = "";
