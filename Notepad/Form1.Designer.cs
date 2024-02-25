@@ -49,6 +49,8 @@
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.цветВсегоТекстаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.шрифтВсегоТекстаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,7 +134,9 @@
             // 
             this.изменитьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.цветToolStripMenuItem,
-            this.шрифтToolStripMenuItem});
+            this.шрифтToolStripMenuItem,
+            this.цветВсегоТекстаToolStripMenuItem,
+            this.шрифтВсегоТекстаToolStripMenuItem});
             this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
             this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.изменитьToolStripMenuItem.Text = "Шрифт";
@@ -140,14 +144,14 @@
             // цветToolStripMenuItem
             // 
             this.цветToolStripMenuItem.Name = "цветToolStripMenuItem";
-            this.цветToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.цветToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.цветToolStripMenuItem.Text = "Цвет";
             this.цветToolStripMenuItem.Click += new System.EventHandler(this.цветToolStripMenuItem_Click);
             // 
             // шрифтToolStripMenuItem
             // 
             this.шрифтToolStripMenuItem.Name = "шрифтToolStripMenuItem";
-            this.шрифтToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.шрифтToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.шрифтToolStripMenuItem.Text = "Шрифт";
             this.шрифтToolStripMenuItem.Click += new System.EventHandler(this.шрифтToolStripMenuItem_Click);
             // 
@@ -196,7 +200,7 @@
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
@@ -216,6 +220,20 @@
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             // 
+            // цветВсегоТекстаToolStripMenuItem
+            // 
+            this.цветВсегоТекстаToolStripMenuItem.Name = "цветВсегоТекстаToolStripMenuItem";
+            this.цветВсегоТекстаToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.цветВсегоТекстаToolStripMenuItem.Text = "Цвет всего текста";
+            this.цветВсегоТекстаToolStripMenuItem.Click += new System.EventHandler(this.цветВсегоТекстаToolStripMenuItem_Click);
+            // 
+            // шрифтВсегоТекстаToolStripMenuItem
+            // 
+            this.шрифтВсегоТекстаToolStripMenuItem.Name = "шрифтВсегоТекстаToolStripMenuItem";
+            this.шрифтВсегоТекстаToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.шрифтВсегоТекстаToolStripMenuItem.Text = "Шрифт всего текста ";
+            this.шрифтВсегоТекстаToolStripMenuItem.Click += new System.EventHandler(this.шрифтВсегоТекстаToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -226,7 +244,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = "Notepad";
+            this.Text = "Блокнот";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -255,6 +273,8 @@
         private System.Windows.Forms.ToolStripMenuItem вырезатьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem копироватьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вставитьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem цветВсегоТекстаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem шрифтВсегоТекстаToolStripMenuItem;
     }
 }
 
